@@ -1,8 +1,8 @@
 package main
 
 import (
-	"mongofiber/configs"
-	"mongofiber/routes"
+	"github.com/kavitheshAS/mongofiber/configs"
+	"github.com/kavitheshAS/mongofiber/routes"
 
 	"github.com/gofiber/fiber/v2"
 )

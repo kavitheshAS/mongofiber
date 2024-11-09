@@ -2,11 +2,12 @@ package controllers
 
 import (
 	"context"
-	"mongofiber/configs"
-	"mongofiber/models"
-	"mongofiber/responses"
 	"net/http"
 	"time"
+
+	"github.com/kavitheshAS/mongofiber/configs"
+	"github.com/kavitheshAS/mongofiber/models"
+	"github.com/kavitheshAS/mongofiber/responses"
 
 	"github.com/go-playground/validator/v10"
 	"github.com/gofiber/fiber/v2"

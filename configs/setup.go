@@ -15,13 +15,13 @@ import (
 // then we check if there is an error connecting to the database and cancel the connection if connection period exceeds 10s
 // thn we pinged the database to test our conn and returned client instance
 // createn a DB variable instance of the connectDB.
-func connectDB() *mongo.Client {
+func ConnectDB() *mongo.Client {
 	client, err := mongo.NewClient(options.Client().ApplyURI(EnvMongoURI()))
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+	ctx, cancel := context.WithTimeout(context.Background(), 30*time.Second)
 	defer cancel()
 
 	err = client.Connect(ctx)
@@ -39,7 +39,7 @@ func connectDB() *mongo.Client {
 }
 
 // client instance
-var DB *mongo.Client = connectDB()
+var DB *mongo.Client = ConnectDB()
 
 //getting the database collections
 

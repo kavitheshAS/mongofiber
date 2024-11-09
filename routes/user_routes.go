@@ -1,7 +1,7 @@
 package routes
 
 import (
-	"mongofiber/controllers" //add this
+	"github.com/kavitheshAS/mongofiber/controllers" //add this
 
 	"github.com/gofiber/fiber/v2"
 )
